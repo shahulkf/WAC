@@ -1,7 +1,7 @@
 import 'package:sqflite/sqflite.dart';
 // ignore: depend_on_referenced_packages
 import 'package:path/path.dart';
-import 'package:task/model/model.dart';
+import 'package:task/features/home/model/model.dart';
 
 class DatabaseHelper {
   static final DatabaseHelper _instance = DatabaseHelper._();

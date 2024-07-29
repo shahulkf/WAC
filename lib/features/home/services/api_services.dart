@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'package:task/model/model.dart';
+import 'package:task/features/home/model/model.dart';
 
 const String url = 'https://64bfc2a60d8e251fd111630f.mockapi.io/api/Todo';
 

@@ -3,10 +3,10 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
-import 'package:task/services/api_services.dart';
-import 'package:task/utils/theme.dart';
-import 'package:task/view%20model/home_view_model.dart';
-import 'package:task/view/homepage.dart';
+import 'package:task/features/home/services/api_services.dart';
+import 'package:task/features/home/utils/theme.dart';
+import 'package:task/features/home/view%20model/home_view_model.dart';
+import 'package:task/features/home/view/homepage.dart';
 
 void main() {
   HttpOverrides.global = MyHttpOverrides();

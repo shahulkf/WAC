@@ -1,7 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:task/model/model.dart';
-import 'package:task/utils/constants/constants.dart';
+import 'package:task/features/home/model/model.dart';
+import 'package:task/features/home/utils/constants/constants.dart';
 
 class BannerSliderWidget extends StatelessWidget {
   final List<Content> contents;

@@ -1,17 +1,15 @@
-
-
 import 'dart:convert';
 import 'dart:developer';
 import 'dart:io'; // For handling SocketException
 
 import 'package:flutter/material.dart';
-import 'package:task/model/model.dart';
-import 'package:task/services/api_services.dart';
-import 'package:task/services/local_db_services.dart';
-import 'package:task/view/widgets/banner_slider.dart';
-import 'package:task/view/widgets/category.dart';
-import 'package:task/view/widgets/product.dart';
-import 'package:task/view/widgets/single_banner.dart';
+import 'package:task/features/home/model/model.dart';
+import 'package:task/features/home/services/api_services.dart';
+import 'package:task/features/home/services/local_db_services.dart';
+import 'package:task/features/home/view/widgets/banner_slider.dart';
+import 'package:task/features/home/view/widgets/category.dart';
+import 'package:task/features/home/view/widgets/product.dart';
+import 'package:task/features/home/view/widgets/single_banner.dart';
 
 class HomeViewModel extends ChangeNotifier {
   bool homeLoading = false;
@@ -72,7 +70,7 @@ class HomeViewModel extends ChangeNotifier {
               homePageWidgets.add(SingleBannerWidget(imageUrl));
             }
             break;
-          case "categories": // Corrected spelling to 'categories'
+          case "catagories": // Corrected spelling to 'categories'
             final contents = item.contents;
             if ((contents ?? []).isNotEmpty) {
               homePageWidgets.add(CategoryWidget(contents ?? []));

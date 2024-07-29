@@ -1,10 +1,8 @@
-
-
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:task/model/model.dart';
-import 'package:task/utils/constants/constants.dart';
+import 'package:task/features/home/model/model.dart';
+import 'package:task/features/home/utils/constants/constants.dart';
 
 class CategoryWidget extends StatelessWidget {
   final List<Content> categories;
@@ -23,7 +21,7 @@ class CategoryWidget extends StatelessWidget {
             children: [
               Text('Categories',
                   style:
-                      TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w500)),
+                      TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w400)),
               Text(
                 'View all',
                 style: TextStyle(
@@ -67,7 +65,6 @@ class CategoryItem extends StatelessWidget {
               borderRadius: BorderRadius.circular(10),
               border: Border.all(width: .5, color: Colors.grey),
             ),
-            // child:   const SizedBox(height: 8),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

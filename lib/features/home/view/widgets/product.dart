@@ -1,10 +1,9 @@
-
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_stars/flutter_rating_stars.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:task/model/model.dart';
-import 'package:task/utils/constants/constants.dart';
+import 'package:task/features/home/model/model.dart';
+import 'package:task/features/home/utils/constants/constants.dart';
 
 class ProductWidget extends StatelessWidget {
   final List<Content> products;
@@ -23,7 +22,7 @@ class ProductWidget extends StatelessWidget {
             children: [
               Text(
                 title,
-                style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w500),
+                style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w400),
               ),
               Text(
                 'View all',

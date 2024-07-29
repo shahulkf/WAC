@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:motion_tab_bar_v2/motion-tab-bar.dart';
 import 'package:provider/provider.dart';
-import 'package:task/utils/constants/constants.dart';
-import 'package:task/view%20model/home_view_model.dart';
+import 'package:task/features/home/utils/constants/constants.dart';
+import 'package:task/features/home/view%20model/home_view_model.dart';
 import 'package:tuple/tuple.dart';
 
 class HomePage extends StatelessWidget {
@@ -29,16 +29,23 @@ class HomePage extends StatelessWidget {
         preferredSize: Size.fromHeight(screenFullHeight * .07),
         child: AppBar(
           backgroundColor: const Color.fromARGB(255, 147, 200, 72),
-          leading: const Icon(Icons.shopping_cart_outlined),
+          leading: const Icon(
+            Icons.shopping_cart_outlined,
+            size: 26,
+            color: Colors.black54,
+          ),
           title: SizedBox(
             height: screenFullHeight * .04.w,
             child: TextField(
               decoration: InputDecoration(
                 filled: true,
                 fillColor: Colors.white,
-                suffixIcon: const Icon(Icons.search),
+                suffixIcon: const Icon(
+                  Icons.search,
+                  color: Colors.grey,
+                ),
                 border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(30),
+                  borderRadius: BorderRadius.circular(18),
                   borderSide: BorderSide.none,
                 ),
               ),
@@ -49,6 +56,7 @@ class HomePage extends StatelessWidget {
               icon: const Icon(
                 Icons.notifications_none,
                 color: Colors.white,
+                size: 29,
               ),
               onPressed: () {},
             ),
@@ -69,7 +77,6 @@ class HomePage extends StatelessWidget {
                   );
                 } else {
                   if (data.item3) {
-                    // Showing cached data when offline
                     return RefreshIndicator(
                       onRefresh: () => _refreshData(context),
                       child: ListView.builder(
