@@ -70,7 +70,7 @@ class HomeViewModel extends ChangeNotifier {
               homePageWidgets.add(SingleBannerWidget(imageUrl));
             }
             break;
-          case "catagories": // Corrected spelling to 'categories'
+          case "catagories": 
             final contents = item.contents;
             if ((contents ?? []).isNotEmpty) {
               homePageWidgets.add(CategoryWidget(contents ?? []));
@@ -81,7 +81,7 @@ class HomeViewModel extends ChangeNotifier {
         }
       }
 
-      // Save data to local database for offline use
+     
       await _dbHelper
           .insertData(json.encode(_data.map((item) => item.toJson()).toList()));
 
